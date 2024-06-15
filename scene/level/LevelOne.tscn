@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bre60ldcc6vp7"]
+
+[ext_resource type="PackedScene" uid="uid://bbs2ifws53qs3" path="res://scene/player/Player.tscn" id="1_gm1lt"]
+[ext_resource type="PackedScene" uid="uid://bvo80lemgqu1d" path="res://scene/object/Floor.tscn" id="2_o0n5d"]
+[ext_resource type="PackedScene" uid="uid://cj8qbkn3148gd" path="res://scene/object/MovableFloor.tscn" id="3_1vw21"]
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="Floor" parent="Floors" instance=ExtResource("2_o0n5d")]
+position = Vector2(590, 592)
+scale = Vector2(24.5853, 8.08522)
+
+[node name="Floor2" parent="Floors" instance=ExtResource("2_o0n5d")]
+position = Vector2(989, 307)
+rotation = 1.57079
+scale = Vector2(14.2577, 4.31605)
+
+[node name="Floor3" parent="Floors" instance=ExtResource("2_o0n5d")]
+position = Vector2(873, 154)
+scale = Vector2(5.78319, -4.86083)
+
+[node name="MovableFloor" parent="Floors" instance=ExtResource("3_1vw21")]
+position = Vector2(365, 338)
+scale = Vector2(-5.70502, -27.5984)
+offset = Vector2(0, -5)
+duration = 2.0
+
+[node name="Player" parent="." instance=ExtResource("1_gm1lt")]
+position = Vector2(534, 469)
+scale = Vector2(5.79508, 5.3282)

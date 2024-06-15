@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj8qbkn3148gd"]
+
+[ext_resource type="Script" path="res://scene/object/script/movable_floor.gd" id="1_6yl8s"]
+[ext_resource type="Texture2D" uid="uid://c6q8q6nd0ec1c" path="res://sprite/object/floor.png" id="1_oy1ma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08qif"]
+size = Vector2(32, 16)
+
+[node name="MovableFloor" type="Node2D"]
+script = ExtResource("1_6yl8s")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="Floor" type="Sprite2D" parent="AnimatableBody2D"]
+texture_filter = 1
+texture = ExtResource("1_oy1ma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+scale = Vector2(0.936074, 0.998329)
+shape = SubResource("RectangleShape2D_08qif")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatableBody2D"]
+scale = Vector2(1.00118, 0.874782)
+shape = SubResource("RectangleShape2D_08qif")
